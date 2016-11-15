@@ -1,11 +1,8 @@
-.page-content {
-  width: calc(100% - 200px);
-  height: 100%;
-}
 
 #messages {
-  max-height: 450px;
+  max-height: calc(100% - 130px);
   overflow-y: auto;
+  margin-left: 20px;
   .avatar {
     margin: 0.5rem;
   }
@@ -39,5 +36,19 @@
   .message-body {
     opacity: 0.8;
     font-size: 13px;
+  }
+}
+
+.chatinput {
+  width: calc(100% - 20px);
+  background: #eee;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+
+  input {
+    width: calc(100% - 24px);
+    padding: 10px;
+    font-size: 16px;
   }
 }
