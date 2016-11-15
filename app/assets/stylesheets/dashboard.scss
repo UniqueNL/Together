@@ -1,3 +1,25 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.page-content {
+  width: calc(100% - 200px);
+  height: 100%;
+}
+
+header {
+  background: #eee;
+  padding: 15px 20px;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+  }
+
+  h3 {
+    margin:0;
+    padding:0;
+    font-size: 18px;
+    opacity: 0.7;
+  }
+}
