@@ -1,0 +1,118 @@
+/*
+*
+*  NAVIGATION SCSS
+*  For the whole sidebar where the channels and buttons are stored.
+*
+*/
+
+.list-content {
+  width: 200px;
+  background: rgb(84, 103, 203);
+  color: white;
+  height: 100%;
+}
+
+.application-name {
+  width: calc(100% - 40px);
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background: rgb(65, 82, 172);
+}
+
+.profile-tab {
+  width: calc(100% - 40px);
+  padding: 20px;
+  font-size: 13px;
+
+  h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+
+}
+
+.channel-tab {
+  width: calc(100% - 40px);
+  padding: 20px;
+
+  h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      color: rgba(255,255,255,.5);
+      text-transform: lowercase;
+      font-weight: bold;
+      font-size: 13px;
+      padding: 1px 0;
+
+      a {
+        text-decoration: inherit;
+        color: rgba(255,255,255,.5);
+      }
+    }
+  }
+
+}
+
+
+.btn-tab {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  display: inline-block;
+  width: calc(100%);
+  text-align: center;
+  padding: 10px 0;
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+.green {
+  background: rgb(35, 168, 81);
+}
+
+.red {
+  background: rgb(184, 54, 54);
+}
+
+
+.profile-info-container {
+  display: flex;
+  margin-top: 10px;
+
+  .profile-avatar img {
+    border-radius: 5px;
+    border: 2px solid white;
+  }
+
+  .profile-name {
+    margin-top: 3px;
+    text-transform: capitalize;
+    margin-left: 10px;
+
+    .profile-email {
+      text-transform: lowercase;
+      font-size: 10px;
+    }
+  }
+}

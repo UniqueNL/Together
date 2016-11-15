@@ -1,2 +1,21 @@
 .list-content
-  p Hi there.
+  .application-name
+    | TogetherChat
+  .profile-tab
+    h3 Profile
+    .profile-info-container
+      .profile-avatar
+        = gravatar_for current_user
+      .profile-name
+        = current_user.name 
+        .profile-email
+          = current_user.email
+  - if current_user
+    .btn-tab.green = link_to('Edit profile', edit_user_registration_path)
+    .btn-tab.red = link_to "Sign Out", destroy_user_session_path, method: :delete
+  .channel-tab
+    h3 Channels
+    ul
+      - if !@chat_rooms.nil?
+        = render @chat_rooms
+    = link_to '+ Add a channel', new_chat_room_path

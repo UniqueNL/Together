@@ -15,3 +15,8 @@
 //= require turbolinks
 //= require cable
 //= require_tree .
+
+$( document ).on('turbolinks:load', function() {
+  $('.assignChannel').prepend('#');
+  $('.channel-tab ul li').prepend('#');
+})
