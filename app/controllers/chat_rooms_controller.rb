@@ -9,10 +9,12 @@ class ChatRoomsController < ApplicationController
 
   def show
     @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
+    @message = Message.new
+    @chat_rooms = ChatRoom.all
   end
 
   def create
-    @chat_room = current_user.chat_rooms.build(chat_room_params)
+    @chat_room = current_user.chat_rooms.build(chat_room_params) unless current_user.blank?
     if @chat_room.save
       flash[:success] = 'Chat room added!'
       redirect_to chat_rooms_path
