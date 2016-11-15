@@ -2,10 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .page-content {
-  width: calc(100% - 200px);
-  height: 100%;
+  width: calc(100% - 240px);
+  height: calc(100% - 40px);
+  // background: url(http://res.cloudinary.com/unique/image/upload/c_scale,q_61,w_1837/v1479224412/photo-1439923274069-a6f070db0c99_v0luzo.jpg);
+  background: red;
+  padding: 20px;
 }
-
 header {
   background: #eee;
   padding: 15px 20px;
