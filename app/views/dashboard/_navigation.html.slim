@@ -7,4 +7,6 @@
   .channel-tab
     h3 Channels
     ul
-      = render @chat_rooms
+      - if !current_page?('/chat_rooms/new')
+        = render @chat_rooms
+    = link_to 'Add a channel', new_chat_room_path

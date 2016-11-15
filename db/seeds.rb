@@ -5,4 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-rock = ChatRoom.create(title:"#Rock")
+
+general = ChatRoom.create(title:"general")
+random = ChatRoom.create(title:"random")
+events = ChatRoom.create(title:"events")
+developmentteam = ChatRoom.create(title:"developmentteam")
+marketing = ChatRoom.create(title:"marketing")
+inspiration = ChatRoom.create(title:"inspiration")
