@@ -20,6 +20,7 @@ gem 'devise'
 
 gem 'slim-rails'
 
+gem 'redis', '~> 3.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
