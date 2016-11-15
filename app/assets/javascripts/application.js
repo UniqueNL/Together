@@ -17,5 +17,5 @@
 //= require_tree .
 
 $( document ).on('turbolinks:load', function() {
-  $('.assignChannel').prepend('#');
+  $('.assignChannel', '.channel-tab ul li').prepend('#');
 })

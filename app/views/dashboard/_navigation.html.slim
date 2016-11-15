@@ -1,6 +1,10 @@
 .list-content
   .application-name
-  | Channels
-  ul
-    CHANNELS
-    = render @chat_rooms
+    | TogetherChat
+  .profile-tab
+    h3 Profile
+    p User info here
+  .channel-tab
+    h3 Channels
+    ul
+      = render @chat_rooms

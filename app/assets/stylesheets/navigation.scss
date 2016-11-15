@@ -10,5 +10,56 @@
   background: rgb(84, 103, 203);
   color: white;
   height: 100%;
+}
+
+.application-name {
+  width: calc(100% - 40px);
   padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background: rgb(65, 82, 172);
+}
+
+.assignChannel {
+
+}
+
+.profile-tab {
+  width: calc(100% - 40px);
+  padding: 20px;
+  font-size: 13px;
+
+  h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+}
+
+.channel-tab {
+  width: calc(100% - 40px);
+  padding: 20px;
+
+  h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
 }
