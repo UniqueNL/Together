@@ -1,0 +1,18 @@
+.page-content {
+  width: calc(100% - 200px);
+  height: 100%;
+  padding: 20px;
+}
+
+#messages {
+  max-height: 450px;
+  overflow-y: auto;
+  .avatar {
+    margin: 0.5rem;
+  }
+}
+
+.message-input {
+  position: relative;
+  bottom: 0;
+}

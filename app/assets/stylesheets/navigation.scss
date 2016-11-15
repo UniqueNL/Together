@@ -21,10 +21,6 @@
   background: rgb(65, 82, 172);
 }
 
-.assignChannel {
-
-}
-
 .profile-tab {
   width: calc(100% - 40px);
   padding: 20px;
@@ -37,6 +33,7 @@
     padding: 0;
     font-size: 11px;
   }
+
 }
 
 .channel-tab {
@@ -72,4 +69,50 @@
     }
   }
 
+}
+
+
+.btn-tab {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  display: inline-block;
+  width: calc(100%);
+  text-align: center;
+  padding: 10px 0;
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+.green {
+  background: rgb(35, 168, 81);
+}
+
+.red {
+  background: rgb(184, 54, 54);
+}
+
+
+.profile-info-container {
+  display: flex;
+  margin-top: 10px;
+
+  .profile-avatar img {
+    border-radius: 5px;
+    border: 2px solid white;
+  }
+
+  .profile-name {
+    margin-top: 3px;
+    text-transform: capitalize;
+    margin-left: 10px;
+
+    .profile-email {
+      text-transform: lowercase;
+      font-size: 10px;
+    }
+  }
 }
