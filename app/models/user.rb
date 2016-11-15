@@ -10,8 +10,10 @@ class User < ApplicationRecord
   def name
     if nickname
       nickname
+    elsif firstname
+      firstname
     else
-      firstname + " " + lastname
+      email
     end
   end
 
