@@ -1,6 +1,16 @@
 .list-content
   .application-name
     | TogetherChat
+  .channel-tab
+    h3
+      | Channels (
+      = @chat_rooms.count
+      | )
+    ul
+      
+      = render @chat_rooms
+    = link_to new_chat_room_path
+      .btn-tab Add a channel
   .profile-tab
     h3 Profile
     .profile-info-container
@@ -10,12 +20,8 @@
         = current_user.name 
         .profile-email
           = current_user.email
-  - if current_user
-    .btn-tab.green = link_to('Edit profile', edit_user_registration_path)
-    .btn-tab.red = link_to "Sign Out", destroy_user_session_path, method: :delete
-  .channel-tab
-    h3 Channels
-    ul
-      
-      = render @chat_rooms
-    = link_to '+ Add a channel', new_chat_room_path
+    - if current_user
+      = link_to edit_user_registration_path
+        .btn-tab Edit profile
+      = link_to destroy_user_session_path, method: :delete
+        .btn-tab Sign out

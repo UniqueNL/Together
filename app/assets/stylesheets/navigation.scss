@@ -22,9 +22,11 @@
 }
 
 .profile-tab {
-  width: calc(100% - 40px);
+  width: 160px;
   padding: 20px;
   font-size: 13px;
+  position: absolute;
+  bottom: 0;
 
   h3 {
     font-weight: bold;
@@ -77,24 +79,20 @@
   font-weight: bold;
   text-transform: uppercase;
   color: white;
+  background: rgba(0,0,0,.3);
+  border-radius: 5px;
+  margin-top: 3px;
   display: inline-block;
   width: calc(100%);
   text-align: center;
   padding: 10px 0;
+  cursor: pointer;
 
   a {
     color: inherit;
     text-decoration: inherit;
   }
 }
-.green {
-  background: rgb(35, 168, 81);
-}
-
-.red {
-  background: rgb(184, 54, 54);
-}
-
 
 .profile-info-container {
   display: flex;

@@ -2,7 +2,9 @@
 #messages {
   max-height: calc(100% - 180px);
   overflow-y: auto;
-  min-height: 579px;
+  min-height: 569px;
+  margin-bottom: 10px;
+  border-radius: 0 0 5px 5px;
   padding-left: 10px;
   background: white;
   padding-top: 10px;
@@ -48,7 +50,7 @@
   padding: 10px;
   position: relative;
   bottom: 0;
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
 
   input {
     width: calc(100% - 24px);
