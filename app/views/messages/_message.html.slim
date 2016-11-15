@@ -1,0 +1,10 @@
+.message
+  .avatar
+    = gravatar_for message.user
+  .message-information
+    .author
+      = message.user.name
+    .timestamp
+      = message.hours
+    .message-body
+      = message.body
