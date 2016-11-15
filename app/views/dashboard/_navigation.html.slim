@@ -4,9 +4,11 @@
   .profile-tab
     h3 Profile
     p User info here
+    - if current_user
+      = link_to('Edit registration', edit_user_registration_path)
+      = link_to "Sign Out", destroy_user_session_path, method: :delete
   .channel-tab
     h3 Channels
     ul
-      - if !current_page?('/chat_rooms/new')
-        = render @chat_rooms
-    = link_to 'Add a channel', new_chat_room_path
+      = render @chat_rooms
+    = link_to '+ Add a channel', new_chat_room_path
