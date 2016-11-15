@@ -1,5 +1,8 @@
 <header>
   <h1 class="assignChannel"><%= @chat_room.title %></h1>
+  <p><%= @chat_room.description %></p>
+  <%=link_to "Delete",chat_room_path(@chat_room.id), 'data-method' => :delete, :class => "delete", :confirm => "Are you sure ?"%> 
+
 
 </header>
 <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
@@ -9,7 +12,7 @@
     <%= render @chat_room.messages %>
   <% end %>
 </div>
-  
+
 <div class="chatinput">
   <%= form_for @message, url: '#', id: 'formSubmit' do |f| %>
     <%= hidden_field_tag 'chat_room_id', @chat_room.id %>

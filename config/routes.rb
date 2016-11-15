@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'chat_rooms_controller/index'
 
-  resources :chat_rooms, only: [:new, :create, :show, :index]
+  resources :chat_rooms, only: [:new, :create, :show, :index, :destroy]
   resources :messages
 
   root 'chat_rooms#index'

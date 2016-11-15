@@ -8,7 +8,13 @@ class User < ApplicationRecord
 
 
   def name
-    email.split('@')[0]
+    if nickname
+      nickname
+    elsif firstname
+      firstname
+    else
+      email
+    end
   end
 
   def has_profile?

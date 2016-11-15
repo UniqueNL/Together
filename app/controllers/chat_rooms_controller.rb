@@ -5,7 +5,6 @@ class ChatRoomsController < ApplicationController
 
   def new
     @chat_room = ChatRoom.new
-    
   end
 
   def show
@@ -24,9 +23,15 @@ class ChatRoomsController < ApplicationController
     end
   end
 
+  def destroy
+    @chat_room = ChatRoom.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to root_path
+  end
+
   private
 
   def chat_room_params
-    params.require(:chat_room).permit(:title)
+    params.require(:chat_room).permit(:title, :description)
   end
 end

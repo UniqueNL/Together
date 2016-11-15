@@ -5,6 +5,10 @@
     <%= f.label :title %>
     <%= f.text_field :title, autofocus: true, class: 'form-control' %>
   </div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, autofocus: true, class: 'form-control' %>
+  </div>
 
   <%= f.submit "Add!", class: 'btn btn-primary' %>
 <% end %>
