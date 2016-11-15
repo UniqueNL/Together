@@ -1,6 +1,8 @@
 class MessagesController < ApplicationController
 
   def destroy
-    Message.find(params[:id]).destroy
+    @message = Message.find(params[:id]).destroy
+    flash[:success] = "message deleted"
+    redirect_to root_path
   end
 end
