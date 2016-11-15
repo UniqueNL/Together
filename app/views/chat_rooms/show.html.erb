@@ -1,15 +1,20 @@
-<h1 class="assignChannel"><%= @chat_room.title %></h1>
+<header>
+  <h1 class="assignChannel"><%= @chat_room.title %></h1>
 
+</header>
 <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-  <%= render @chat_room.messages %>
+  <% if @chat_room.messages.empty? %>
+    <p>This is a new channel! Write a new message.</p>
+  <% else %>
+    <%= render @chat_room.messages %>
+  <% end %>
 </div>
-
-<%= form_for @message, url: '#' do |f| %>
-  <div class="form-group">
-    <%= f.label :body %>
-    <%= f.text_area :body, class: 'form-control' %>
-    <small class="text-muted">From 2 to 1000 characters</small>
-  </div>
-
-  <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
-<% end %>
+  
+<div class="chatinput">
+  <%= form_for @message, url: '#', id: 'formSubmit' do |f| %>
+    <%= hidden_field_tag 'chat_room_id', @chat_room.id %>
+    <div>
+        <%= f.text_field :body, class: 'form-control', placeholder: 'Type your message...' %>
+    </div>
+  <% end %>
+</div>
