@@ -33,14 +33,6 @@ body {
   padding: 20px;
 }
 
-.list-content {
-  width: 200px;
-  background: rgb(84, 103, 203);
-  color: white;
-  height: 100%;
-  padding: 20px;
-}
-
 #messages {
   max-height: 450px;
   overflow-y: auto;
