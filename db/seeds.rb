@@ -12,3 +12,5 @@ events = ChatRoom.create(title:"events", description: "Keep up with the latest e
 development = ChatRoom.create(title:"development", description: "Just development. Fight with someone if he fucked up merging.")
 marketing = ChatRoom.create(title:"marketing", description: "Marketing? Boring! Oh well.. they need a channel aswell.")
 inspiration = ChatRoom.create(title:"inspiration", description: "How can we do as much as possible in the least amount of time?")
+
+sam = User.create(nickname: "UniqueNL", firstname: "Sam", lastname: "Taal", email:"samtaal@outlook.com", password: "samsam", admin: true)
