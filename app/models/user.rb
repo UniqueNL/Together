@@ -19,6 +19,10 @@ class User < ApplicationRecord
     end
   end
 
+  def is_admin?
+    admin
+  end
+
   def has_profile?
     profile.present?
   end

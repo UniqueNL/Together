@@ -1,8 +1,9 @@
 <header>
   <h1 class="assignChannel"><%= @chat_room.title %></h1>
   <h3><%= @chat_room.description %></h3>
-  <h4>Admin Tools: <%=link_to "Delete channel",chat_room_path(@chat_room.id), 'data-method' => :delete, :class => "delete", :confirm => "Are you sure ?"%></h4>
-
+  <% if current_user.is_admin? %>
+    <h4>Admin Tools: <%=link_to "Delete channel",chat_room_path(@chat_room.id), 'data-method' => :delete, :class => "delete", :confirm => "Are you sure ?"%></h4>
+  <% end %>
 
 </header>
 <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
