@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :chat_rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
 
+  validates_presence_of :nickname, :firstname, :lastname
+  validates_uniqueness_of :nickname
 
   def name
     if nickname
