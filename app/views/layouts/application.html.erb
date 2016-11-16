@@ -16,9 +16,11 @@
       <% end %>
       <div class="page-content">
         <%= yield %>
+        <div class="popup">
+        <div class="notice"><%= notice %></div>
+        <div class="alert"><%= alert %></div>
       </div>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      </div>
     </div>
   </body>
 </html>
