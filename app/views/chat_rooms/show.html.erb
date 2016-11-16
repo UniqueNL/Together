@@ -6,11 +6,7 @@
 
 </header>
 <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-  <% if @chat_room.messages.empty? %>
-    <p>This is a new channel! Write a new message.</p>
-  <% else %>
-    <%= render @chat_room.messages %>
-  <% end %>
+  <%= render @chat_room.messages %>
 </div>
 
 <div class="chatinput">
