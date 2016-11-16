@@ -1,0 +1,108 @@
+.login-container {
+  width: 500px;
+  margin:0 auto;
+  display: flex;
+}
+
+.usermodal {
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.guestmodal {
+  width: 30%;
+  background: white;
+  padding: 20px;
+  min-height: 300px;
+
+  max-height: 600px;
+  border-radius: 5px;
+
+  input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px
+  }
+
+  input[type="checkbox"] {
+    width: inherit;
+  }
+
+  a {
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+
+  }
+
+  .guest-submit {
+    background: rgb(54, 186, 63);
+    font-weight: bold;
+    font-size: 12px;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+}
+
+.guestintro {
+  width: 30%;
+  color: white;
+  max-height: 600px;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 46px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  .btn-signup {
+    padding: 10px 20px;
+    border: 2px solid white;
+    font-weight: bold;
+    font-size: 12px;
+    width: 100px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+
+    &:hover {
+      background: white;
+      color: #333;
+    }
+
+    &:active {
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
+.guest-container {
+  margin: 0 auto;
+  justify-content: space-around;
+  margin-top: 100px;
+}

@@ -1,0 +1,61 @@
+.popup {
+  position: fixed;
+  bottom: 30px;
+  width: 400px;
+  margin-left: -200px;
+  left: 50%;
+  text-align: center;
+  display: table;
+  border-radius: 10px;
+  -webkit-animation: seconds 1.0s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 5s;
+  animation: seconds 1.0s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 5s;
+
+
+  .notice {
+    background: rgba(51, 157, 84,0.8);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+
+    &:empty {
+      padding: 0;
+    }
+  }
+
+  .alert {
+    background: rgba(157, 51, 51, 0.8);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+
+    &:empty {
+      padding: 0;
+    }
+  }
+}
+
+
+@-webkit-keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    bottom: -200px;
+  }
+}
+@keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    bottom: -200px;
+  }
+}

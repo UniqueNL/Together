@@ -1,16 +1,12 @@
 <header>
   <h1 class="assignChannel"><%= @chat_room.title %></h1>
-  <p><%= @chat_room.description %></p>
-  <%=link_to "Delete",chat_room_path(@chat_room.id), 'data-method' => :delete, :class => "delete", :confirm => "Are you sure ?"%> 
+  <h3><%= @chat_room.description %></h3>
+  <h4>Admin Tools: <%=link_to "Delete channel",chat_room_path(@chat_room.id), 'data-method' => :delete, :class => "delete", :confirm => "Are you sure ?"%></h4>
 
 
 </header>
 <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-  <% if @chat_room.messages.empty? %>
-    <p>This is a new channel! Write a new message.</p>
-  <% else %>
-    <%= render @chat_room.messages %>
-  <% end %>
+  <%= render @chat_room.messages %>
 </div>
 
 <div class="chatinput">
