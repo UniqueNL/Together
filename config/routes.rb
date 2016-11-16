@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   authenticate :user do
     mount ActionCable.server => '/cable'
   end
+
+  get '/users', to: 'chat_rooms#index'
 end
