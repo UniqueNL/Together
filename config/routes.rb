@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :dashboard
   resources :chat_rooms
   resources :messages
+  resources :themes
 
   root 'chat_rooms#index'
 

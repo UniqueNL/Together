@@ -1,0 +1,9 @@
+<div class="usermodal">
+<% if current_user && current_user.is_admin? %>
+  <h1>Add theme</h1>
+
+  <%= render 'form' %>
+<% else %>
+  <% controller.redirect_to root_path %>
+<% end %>
+</div>
