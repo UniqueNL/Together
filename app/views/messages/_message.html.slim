@@ -11,4 +11,4 @@
         = message.body
     - else
       .message-body
-        = message.body
+        = simple_format(message.body).gsub(URI.regexp, '<a href="\0">\0</a>').html_safe
