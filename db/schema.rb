@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 20161117155108) do
     t.index ["user_id"], name: "index_chat_rooms_on_user_id", using: :btree
   end
 
-  create_table "chatrooms_themes", force: :cascade do |t|
+  create_table "chat_rooms_themes", force: :cascade do |t|
     t.integer "chat_room_id"
     t.integer "theme_id"
-    t.index ["chat_room_id"], name: "index_chatrooms_themes_on_chat_room_id", using: :btree
-    t.index ["theme_id"], name: "index_chatrooms_themes_on_theme_id", using: :btree
+    t.index ["chat_room_id"], name: "index_chat_rooms_themes_on_chat_room_id", using: :btree
+    t.index ["theme_id"], name: "index_chat_rooms_themes_on_theme_id", using: :btree
   end
 
   create_table "messages", force: :cascade do |t|
