@@ -73,6 +73,7 @@ RSpec.describe ChatRoom, type: :model do
       it "is correct" do
         chatroom = ChatRoom.new(title: "Chatroom", description: "Testing the description", user: user)
         chatroom.valid?
+        expect(chatroom.errors).to be_empty
       end
     end
   end
