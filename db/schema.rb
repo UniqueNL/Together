@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161117154200) do
+ActiveRecord::Schema.define(version: 20161117155108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20161117154200) do
     t.datetime "updated_at",  null: false
     t.text     "description"
     t.index ["user_id"], name: "index_chat_rooms_on_user_id", using: :btree
+  end
+
+  create_table "chatrooms_themes", force: :cascade do |t|
+    t.integer "chat_room_id"
+    t.integer "theme_id"
+    t.index ["chat_room_id"], name: "index_chatrooms_themes_on_chat_room_id", using: :btree
+    t.index ["theme_id"], name: "index_chatrooms_themes_on_theme_id", using: :btree
   end
 
   create_table "messages", force: :cascade do |t|
