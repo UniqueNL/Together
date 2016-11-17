@@ -3,6 +3,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def chatrooms
     @chat_rooms = ChatRoom.all
+    @themes = Theme.all
   end
 
   private

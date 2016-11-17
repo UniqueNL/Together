@@ -7,8 +7,7 @@
       = @chat_rooms.count
       | )
     ul
-      
-      = render @chat_rooms
+      = render @themes
     - if current_user.is_admin?
       = link_to new_chat_room_path
         .btn-tab Add a channel

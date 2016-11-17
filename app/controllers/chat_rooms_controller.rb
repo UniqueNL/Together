@@ -25,6 +25,20 @@ class ChatRoomsController < ApplicationController
     end
   end
 
+  def edit
+    @chat_room = ChatRoom.find(params[:id])
+  end
+
+  def update
+    @chat_room = ChatRoom.find(params[:id])
+
+    if @chat_room.update_attributes(chat_room_params)
+      redirect_to @chat_room
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     @chat_room = ChatRoom.find(params[:id]).destroy
     flash[:success] = "User deleted"
@@ -34,6 +48,6 @@ class ChatRoomsController < ApplicationController
   private
 
   def chat_room_params
-    params.require(:chat_room).permit(:title, :description)
+    params.require(:chat_room).permit(:title, :description, theme_ids: [])
   end
 end

@@ -10,16 +10,15 @@ ChatRoom.delete_all
 User.delete_all
 
 theme1 = Theme.create(name:"General")
-theme2 = Theme.create(name:"General")
-theme3 = Theme.create(name:"General")
-theme4 = Theme.create(name:"General")
+theme2 = Theme.create(name:"Development")
+theme3 = Theme.create(name:"Design")
+theme4 = Theme.create(name:"Marketing")
 
 general = ChatRoom.create(themes: [theme1], title:"general", description: "Chit-chat about general stuff.")
-general.save!
-random = ChatRoom.create(title:"random", description: "Random posts about kittens, injecting databases with GIFs and more.")
-events = ChatRoom.create(title:"events", description: "Keep up with the latest events and expand your network.")
-development = ChatRoom.create(title:"development", description: "Just development. Fight with someone if he fucked up merging.")
-marketing = ChatRoom.create(title:"marketing", description: "Marketing? Boring! Oh well.. they need a channel aswell.")
-inspiration = ChatRoom.create(title:"inspiration", description: "How can we do as much as possible in the least amount of time?")
+random = ChatRoom.create(themes: [theme1], title:"random", description: "Random posts about kittens and .. stuff..")
+events = ChatRoom.create(themes: [theme1], title:"events", description: "Keep up with the latest events.")
+issues = ChatRoom.create(themes: [theme2], title:"issues", description: "Fight with someone if he fucked up merging.")
+seochat = ChatRoom.create(themes: [theme4], title:"seo-chat", description: "Marketing? Lame!")
+inspiration = ChatRoom.create(themes: [theme3], title:"inspiration", description: "That's interesting...")
 
 sam = User.create(nickname: "UniqueNL", firstname: "Sam", lastname: "Taal", email:"samtaal@outlook.com", password: "samsam", admin: true)
