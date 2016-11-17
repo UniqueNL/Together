@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+
   def show
     @message = Message.all.order_by(:body)
   end
