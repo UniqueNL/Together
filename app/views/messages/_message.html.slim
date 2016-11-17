@@ -6,5 +6,9 @@
       = message.user.name
     .timestamp
       = message.hours
-    .message-body
-      = message.body
+    - if message.mentioned?
+      .message-body.mentioned
+        = message.body
+    - else
+      .message-body
+        = message.body
