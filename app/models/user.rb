@@ -10,13 +10,7 @@ class User < ApplicationRecord
   validates_uniqueness_of :nickname
 
   def name
-    if nickname
-      nickname
-    elsif firstname
-      firstname
-    else
-      email
-    end
+    nickname
   end
 
   def is_admin?
