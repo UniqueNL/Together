@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'capybara'
 
-feature 'Create a chatroom', js: true do
+feature 'INTEGRATION TEST: Create a chatroom', js: true do
   let(:user) { create :user, email: "admin@test.com", password: "secret", admin: true }
 
   before { login_as user }
@@ -21,7 +21,7 @@ feature 'Create a chatroom', js: true do
   end
 end
 
-feature 'Cant create a chatroom as normal user', js: true do
+feature 'INTEGRATION TEST: Cant create a chatroom as normal user', js: true do
   let(:user) { create :user, email: "admin@test.com", password: "secret", admin: false }
 
   before { login_as user }

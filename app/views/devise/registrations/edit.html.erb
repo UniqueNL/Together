@@ -5,19 +5,19 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.email_field :email, autofocus: true, placeholder: "Email" %>
+      <%= f.email_field :email, autofocus: true, placeholder: "Email", id: "email" %>
     </div>
 
     <div class="field">
-      <%= f.text_field :firstname, autofocus: true, placeholder: "Firstname" %>
+      <%= f.text_field :firstname, autofocus: true, placeholder: "Firstname", id: "firstname" %>
     </div>
 
     <div class="field">
-      <%= f.text_field :lastname, autofocus: true, placeholder: "Lastname" %>
+      <%= f.text_field :lastname, autofocus: true, placeholder: "Lastname", id: "lastname" %>
     </div>
 
     <div class="field">
-      <%= f.text_field :nickname, autofocus: true, placeholder: "Nickname" %>
+      <%= f.text_field :nickname, autofocus: true, placeholder: "Nickname", id: "nickname" %>
     </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -26,7 +26,7 @@
 
     <div class="field">
       <i>(leave blank if you don't want to change it)</i><br />
-      <%= f.password_field :password, autocomplete: "off", placeholder: "New password" %>
+      <%= f.password_field :password, autocomplete: "off", placeholder: "New password", id: "new_password" %>
       <% if @minimum_password_length %>
         <br />
         <em><%= @minimum_password_length %> characters minimum</em>
@@ -34,15 +34,15 @@
     </div>
 
     <div class="field">
-      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "New password (confirmation)" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "New password (confirmation)", id: "new_password_confirm" %>
     </div>
 
     <div class="field">
-      <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current password" %>
+      <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current password", id: "current_password" %>
     </div>
 
     <div class="actions">
-      <%= f.submit "Update" %>
+      <%= f.submit "Update", id: "submit" %>
     </div>
   <% end %>
 
