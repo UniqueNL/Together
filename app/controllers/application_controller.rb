@@ -5,5 +5,6 @@ class ApplicationController < ActionController::Base
 
   def chatrooms
     @chat_rooms = ChatRoom.all
+    @themes = Theme.all
   end
 end

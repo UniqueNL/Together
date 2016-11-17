@@ -1,0 +1,7 @@
+.themename
+  = theme.name 
+  = link_to "X" , theme_path(theme), 'data-method' => :delete, :class => "delete", :confirm => "Are you sure ?"
+  
+- theme.chat_rooms.each do |room|
+  li= link_to "#{room.title}", chat_room_path(room)
+  
