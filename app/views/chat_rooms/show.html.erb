@@ -14,7 +14,7 @@
   <%= form_for @message, url: '#', id: 'formSubmit' do |f| %>
     <%= hidden_field_tag 'chat_room_id', @chat_room.id %>
     <div>
-        <%= f.text_field :body, class: 'form-control', placeholder: 'Type your message...', id: "formMessageInput" %>
+        <%= f.text_field :body, class: 'form-control', placeholder: 'Type your message...' %>
     </div>
   <% end %>
 </div>
