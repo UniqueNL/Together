@@ -1,0 +1,21 @@
+.message
+  .avatar
+    = gravatar_for message.user
+  .message-information
+    .author
+      = message.user.name
+    .timestamp
+      = message.hours
+<<<<<<< HEAD
+    - if message.mentioned?
+      .message-body.mentioned
+        = message.body
+    - else
+      .message-body
+        = message.body
+=======
+    .message-body
+      = message.body
+      - if current_user.is_admin?
+        = link_to 'Delete Comment', message_path(message.id), controller: "messages", id: message.id, method: :delete, data: { confirm: 'Are you sure?' }
+>>>>>>> master

@@ -7,6 +7,11 @@ Rails.application.routes.draw do
 
   root 'chat_rooms#index'
 
+<<<<<<< HEAD
+  mount ActionCable.server => '/cable'
+
+  get '/users', to: 'chat_rooms#index'
+=======
   get 'chat_rooms_controller/index'
   get '/users', to: 'chat_rooms#index'
   
@@ -15,4 +20,5 @@ Rails.application.routes.draw do
   authenticate :user do
     mount ActionCable.server => '/cable'
   end
+>>>>>>> master
 end
