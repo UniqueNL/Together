@@ -1,0 +1,24 @@
+<header>
+  <h1 class="assignChannel"><%= @chat_room.title %></h1>
+  <h3><%= @chat_room.description %></h3>
+  <% if current_user.is_admin? %>
+<<<<<<< HEAD
+  <h4>Admin Tools: <%=link_to "Delete channel",chat_room_path(@chat_room.id), 'data-method' => :delete, :class => "delete", :confirm => "Are you sure ?"%>
+=======
+    <h4>Admin Tools: <%=link_to "Delete channel",chat_room_path(@chat_room.id), 'data-method' => :delete, :class => "delete", :confirm => "Are you sure ?"%></h4>
+>>>>>>> master
+  <% end %>
+
+</header>
+<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+  <%= render @chat_room.messages %>
+</div>
+
+<div class="chatinput">
+  <%= form_for @message, url: '#', id: 'formSubmit' do |f| %>
+    <%= hidden_field_tag 'chat_room_id', @chat_room.id %>
+    <div>
+        <%= f.text_field :body, class: 'form-control', placeholder: 'Type your message...' %>
+    </div>
+  <% end %>
+</div>

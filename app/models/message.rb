@@ -11,4 +11,8 @@ class Message < ApplicationRecord
   def seconds
     created_at.strftime(':%S')
   end
+
+  def mentioned?
+    body.downcase.include?(user.nickname.downcase)
+  end
 end

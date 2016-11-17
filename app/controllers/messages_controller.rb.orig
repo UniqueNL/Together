@@ -1,0 +1,16 @@
+class MessagesController < ApplicationController
+
+  def destroy
+<<<<<<< HEAD
+    @messages = ChatRoom.messages
+    @messages.destroy
+    
+    redirect_to root_path
+=======
+    @message = Message.find(params[:id])
+    @message.destroy
+
+    redirect_to :back
+>>>>>>> master
+  end
+end
