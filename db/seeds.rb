@@ -22,3 +22,4 @@ seochat = ChatRoom.create(themes: [theme4], title:"seo-chat", description: "Mark
 inspiration = ChatRoom.create(themes: [theme3], title:"inspiration", description: "That's interesting...")
 
 sam = User.create(nickname: "UniqueNL", firstname: "Sam", lastname: "Taal", email:"samtaal@outlook.com", password: "samsam", admin: true)
+codaisseur = User.create(nickname: "Codaisseur", firstname: "Testing", lastname: "Admin", email:"test@codaisseur.com", password: "codaisseur", admin: true)
