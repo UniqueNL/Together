@@ -21,6 +21,7 @@ $( document ).on('turbolinks:load', function() {
   $('.channel-tab ul li').prepend('# ');
   $('.admin-submenu').hide();
 
+
   $('.admin-submenu').click(function(){
     $('.admin-submenu').show();
   });
