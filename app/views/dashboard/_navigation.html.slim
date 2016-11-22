@@ -2,28 +2,31 @@
   .application-name
     | TogetherChat
   .channel-tab
-    h3
-      | Channels (
-      = @chat_rooms.count
-      | )
+    h3 CHANNELS
     ul
       = render @themes
-    - if current_user.is_admin?
-      = link_to new_chat_room_path
-        .btn-tab Add a channel
-      = link_to new_theme_path
-        .btn-tab Add a theme
+        
+          
   .profile-tab
     h3 Profile
+    .edit-profile-btn Edit
     .profile-info-container
       .profile-avatar
         = gravatar_for current_user
       .profile-name
+        | @
         = current_user.name 
         .profile-email
           = current_user.email
-    - if current_user
-      = link_to edit_user_registration_path
-        .btn-tab Edit profile
-      = link_to destroy_user_session_path, method: :delete
-        .btn-tab Sign out
+      .logout
+        = link_to destroy_user_session_path, :method => :delete
+          img src="http://res.cloudinary.com/unique/image/upload/v1479713991/exit_nfqhkf.png"
+    - if current_user.is_admin?
+      .admin-tab
+        a ADMIN OPTIONS
+      .admin-submenu
+        strong Admin tools:
+        br
+        = link_to "Add a theme", new_theme_path
+        br
+        = link_to "Add a chatroom", new_chat_room_path

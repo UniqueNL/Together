@@ -6,8 +6,8 @@
 */
 
 .list-content {
-  width: 200px;
-  background: rgb(84, 103, 203);
+  width: 240px;
+  background: #011C28;
   color: white;
   height: 100%;
 }
@@ -18,29 +18,47 @@
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  background: rgb(65, 82, 172);
+  background: rgba(65, 82, 172,.4);
 }
 
 .profile-tab {
-  width: 160px;
-  padding: 20px;
   font-size: 13px;
   position: absolute;
   bottom: 0;
+  width: 244px;
+  background: rgba(255,255,255,.05);
 
   h3 {
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
-    padding: 0;
     font-size: 11px;
+    color: rgba(255,255,255,.3);
+    background: rgba(255,255,255,.05);
+    padding: 10px 20px;
+    width: calc(100% - 40px);
   }
+  display:inline-block;
+
+}
+
+.edit-profile-btn {
+  text-align: right;
+  padding: 2px 5px;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  display: inline;
+  position: relative;
+  top: -25px;
+  left: 190px;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 3px;
 
 }
 
 .channel-tab {
   width: calc(100% - 40px);
-  padding: 20px;
 
   h3 {
     font-weight: bold;
@@ -48,6 +66,10 @@
     margin: 0;
     padding: 0;
     font-size: 11px;
+    background: rgba(255,255,255,.05);
+    color: rgba(255,255,255,.3);
+    padding: 10px 20px;
+    width: 100%;
   }
 
   ul {
@@ -58,16 +80,16 @@
     li {
       padding: 0;
       margin: 0;
-      color: rgba(255,255,255,.5);
+      color: rgba(255,255,255, .2);
       text-transform: lowercase;
       font-weight: bold;
       font-size: 13px;
-      padding: 1px 0;
-      padding-left: 10px;
+      padding: 3px 0;
+      padding-left: 20px;
 
       a {
         text-decoration: inherit;
-        color: rgba(255,255,255,.5);
+        color: rgba(255,255,255,.4);
       }
     }
   }
@@ -80,15 +102,16 @@
   font-weight: bold;
   text-transform: uppercase;
   color: white;
-  background: rgba(0,0,0,.3);
+  background: rgba(255,255,255,.1);
   border-radius: 5px;
+  margin: 0px 20px;
   margin-top: 7px;
   display: inline-block;
-  width: calc(100%);
+
   text-align: center;
-  padding: 10px 0;
+  padding: 4px 8px;
   cursor: pointer;
-  box-shadow: 0 3px 0 0 rgba(0,0,0,0.5);
+  box-shadow: 0 3px 0 0 rgba(255,255,255,0.13);
 
   &:active {
     position: relative;
@@ -97,7 +120,7 @@
   }
 
   &:hover {
-    background: rgba(0,0,0,0.4)
+    background: rgba(255,255,255,0.3)
   }
 
   a {
@@ -108,38 +131,89 @@
 
 .profile-info-container {
   display: flex;
-  margin-top: 10px;
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 15px;
 
   .profile-avatar img {
     border-radius: 5px;
-    border: 2px solid white;
+    width: 35px;
   }
 
   .profile-name {
-    margin-top: 3px;
+    margin-top: 4px;
+    font-weight: bold;
+    font-weight: 12px;
     text-transform: capitalize;
     margin-left: 10px;
 
     .profile-email {
       text-transform: lowercase;
       font-size: 10px;
+      color:rgba(255,255,255,0.4)
     }
   }
 }
 
 .themename {
-  font-size: 11px;
-  background: rgba(0,0,0,.4);
-  font-weight: bold;
+  font-size: 12px;
+  font-weight: 900;
   text-transform: uppercase;
-  padding: 5px 10px;
   margin-top: 10px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  padding-bottom: 5px;
+  width: 100%;
 
   a {
     color: white;
     float:right;
     text-align: right;
     text-decoration: none;
+    font-size: 8px;
+    background: rgb(170, 46, 46);
+    padding: 2px 4px 2px 0px;
+    font-weight: 900;
+    border-radius: 100px;
+    width: 10px;
+    height: 10px;
   }
+}
+
+.admin-tab {
+  width: calc(100%);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  margin-top: 2  0px;
+  font-size: 11px;
+  background: rgba(86, 187, 151, 0.4);
+  color: rgba(255,255,255,.5);
+  padding: 10px 20px;
+  width: calc(100% - 44px);
+}
+
+.logout {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 55px;
+}
+
+
+.admin-submenu {
+  position: absolute;
+  left: 250px;
+  top: 45px;
+  height: 50px;
+  padding: 15px 20px;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  z-index: 100;
+  width: 200px;
+  background: white;
+  color: black;
+
 }
