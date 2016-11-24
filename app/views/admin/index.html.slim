@@ -1,4 +1,12 @@
 .usermodal
+  h1 User database
+  p Manage your users here.
+  .user-row
+    .column.top Nickname
+    .column.top First name
+    .column.top Last name
+    .column.top Admin?
+    .column.top Email
   - @users.each do |user|
     .user-row
       .column= user.nickname
@@ -6,4 +14,3 @@
       .column= user.lastname
       .column= user.admin
       .column= user.email
-    
