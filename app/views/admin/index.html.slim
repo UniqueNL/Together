@@ -1,2 +1,9 @@
 .usermodal
-  p hi!
+  - @users.each do |user|
+    .user-row
+      .column= user.nickname
+      .column= user.firstname
+      .column= user.lastname
+      .column= user.admin
+      .column= user.email
+    
