@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :chat_rooms
   resources :messages
   resources :themes
+  resources :admin
 
   root 'chat_rooms#index'
 
