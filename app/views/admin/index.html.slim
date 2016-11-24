@@ -16,5 +16,4 @@
       .column= user.admin
       .column= user.email
       .column
-        =link_to "Edit", edit_user_registration_path
         =link_to "Destroy", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } 

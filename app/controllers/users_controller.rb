@@ -7,4 +7,8 @@ class UsersController < ApplicationController
         redirect_to root_url, notice: "User deleted."
     end
   end
+
+  def edit
+    @user = User.find(params[:id])
+  end
 end
