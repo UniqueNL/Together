@@ -22,7 +22,11 @@ $( document ).on('turbolinks:load', function() {
   $('.admin-submenu').hide();
 
 
-  $('.admin-submenu').click(function(){
-    $('.admin-submenu').show();
+  $('.admin-tab').click(function(){
+    if($(this).hasClass('admin-active')) {
+      $(this).removeClass('admin-active');
+    } else {
+      $(this).addClass("admin-active");
+    }
   });
 });

@@ -1,9 +1,8 @@
 
 #messages {
-  max-height: calc(100% - 180px);
+  max-height: calc(100% - 136px);
   overflow-y: auto;
   min-height: 569px;
-  margin-bottom: 10px;
   border-radius: 0 0 5px 5px;
   padding-left: 10px;
   background: white;
@@ -53,16 +52,15 @@
 }
 
 .chatinput {
-  width: calc(100% - 20px);
   background: #eee;
-  padding: 10px;
-  position: relative;
+  position: absolute;
+  width: calc(100% - 240px );
   bottom: 0;
   border-radius: 5px;
 
   input {
-    width: calc(100% - 24px);
-    padding: 10px;
+    width: calc(100% - 44px);
+    padding: 20px;
     font-size: 16px;
   }
 }

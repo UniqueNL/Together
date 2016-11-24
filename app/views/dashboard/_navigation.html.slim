@@ -9,7 +9,8 @@
           
   .profile-tab
     h3 Profile
-    .edit-profile-btn Edit
+    .edit-profile-btn 
+      =link_to "Edit", edit_user_registration_path 
     .profile-info-container
       .profile-avatar
         = gravatar_for current_user
@@ -24,9 +25,9 @@
     - if current_user.is_admin?
       .admin-tab
         a ADMIN OPTIONS
-      .admin-submenu
-        strong Admin tools:
-        br
-        = link_to "Add a theme", new_theme_path
-        br
-        = link_to "Add a chatroom", new_chat_room_path
+        .admin-options
+          br
+          br
+          = link_to "Add a theme", new_theme_path
+          br
+          = link_to "Add a chatroom", new_chat_room_path

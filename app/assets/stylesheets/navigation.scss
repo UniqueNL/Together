@@ -55,6 +55,10 @@
   font-size: 12px;
   border-radius: 3px;
 
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .channel-tab {
@@ -180,17 +184,28 @@
 }
 
 .admin-tab {
-  width: calc(100%);
   font-weight: bold;
   text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-  margin-top: 2  0px;
+  height: 17px;
   font-size: 11px;
   background: rgba(86, 187, 151, 0.4);
   color: rgba(255,255,255,.5);
   padding: 10px 20px;
   width: calc(100% - 44px);
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(86, 187, 151, 0.5);
+  }
+}
+
+.admin-active {
+  height: 80px;
 }
 
 .logout {
@@ -204,16 +219,8 @@
 
 
 .admin-submenu {
-  position: absolute;
-  left: 250px;
-  top: 45px;
-  height: 50px;
-  padding: 15px 20px;
   box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
   border-radius: 3px;
-  z-index: 100;
-  width: 200px;
   background: white;
   color: black;
-
 }
