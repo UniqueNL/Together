@@ -7,6 +7,7 @@
     .column.top Last name
     .column.top Admin?
     .column.top Email
+    .column.top Actions
   - @users.each do |user|
     .user-row
       .column= user.nickname
@@ -14,3 +15,6 @@
       .column= user.lastname
       .column= user.admin
       .column= user.email
+      .column
+        =link_to "Edit", edit_user_registration_path
+        =link_to "Delete", admin_destroy_user_path, method: :delete
