@@ -17,6 +17,16 @@
 //= require_tree .
 
 $( document ).on('turbolinks:load', function() {
-  $('.assignChannel').prepend('#');
-  $('.channel-tab ul li').prepend('#');
-})
+  $('.assignChannel').prepend('# ');
+  $('.channel-tab ul li').prepend('# ');
+  $('.admin-submenu').hide();
+
+
+  $('.admin-tab').click(function(){
+    if($(this).hasClass('admin-active')) {
+      $(this).removeClass('admin-active');
+    } else {
+      $(this).addClass("admin-active");
+    }
+  });
+});

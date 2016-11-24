@@ -1,0 +1,19 @@
+.usermodal
+  h1 User database
+  p Manage your users here.
+  .user-row
+    .column.top Nickname
+    .column.top First name
+    .column.top Last name
+    .column.top Admin?
+    .column.top Email
+    .column.top Actions
+  - @users.each do |user|
+    .user-row
+      .column= user.nickname
+      .column= user.firstname
+      .column= user.lastname
+      .column= user.admin
+      .column= user.email
+      .column
+        =link_to "Destroy", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } 

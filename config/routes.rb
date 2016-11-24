@@ -5,12 +5,15 @@ Rails.application.routes.draw do
   resources :chat_rooms
   resources :messages
   resources :themes
+  resources :admin
 
   root 'chat_rooms#index'
 
   get 'chat_rooms_controller/index'
   get '/users', to: 'chat_rooms#index'
 
+  match 'users/:id' => 'users#edit', :via => :update, :as => :admin_update_user
+  match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
 
   authenticate :user do
     mount ActionCable.server => '/cable'

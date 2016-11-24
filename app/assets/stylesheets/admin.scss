@@ -1,0 +1,23 @@
+// Place all the styles related to the Admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+
+  &:nth-child(even) {
+    background: rgba(0,0,0,0.02);
+  }
+
+  .column {
+    width: 20%;
+  }
+
+  .top {
+    font-weight: 900;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
